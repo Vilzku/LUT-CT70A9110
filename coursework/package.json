@@ -1,0 +1,22 @@
+{
+  "name": "ct70a9110-front-end",
+  "version": "1.0.0",
+  "description": "Responsive portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vilzku/CT70A9110-Front-End.git"
+  },
+  "author": "Ville Puolitaival",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vilzku/CT70A9110-Front-End/issues"
+  },
+  "homepage": "https://github.com/Vilzku/CT70A9110-Front-End#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
