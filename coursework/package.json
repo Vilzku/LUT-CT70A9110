@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Vilzku/CT70A9110-Front-End#readme",
   "dependencies": {
-    "node-sass": "^5.0.0"
-  }
+    "node-sass": "^5.0.0",
+    "patch-package": "^6.2.2"
+  },
+  "devDependencies": {}
 }
