@@ -20,7 +20,7 @@ body {
   line-height: 1.5;
   overflow: hidden; }
   body.bg-image {
-    background: url("../img/background.JPG") no-repeat center bottom;
+    background: url("../img/background.jpg") no-repeat center bottom;
     background-size: cover; }
     body.bg-image:after {
       content: "";
