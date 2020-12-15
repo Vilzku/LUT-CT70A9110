@@ -29,7 +29,7 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(32, 32, 32, 0.1);
+      background: rgba(0, 0, 0, 0.5);
       z-index: -1; }
   body h1,
   body h2,
@@ -47,9 +47,7 @@ body {
     display: grid;
     width: 1150px;
     grid-template-rows: 270px 8rem 0 0;
-    grid-template-areas: "portrait title-small" "portrait title-large" "line line" "title-lower title-lower";
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem 2rem 4rem 2rem; }
+    grid-template-areas: "portrait title-small" "portrait title-large" "line line" "title-lower title-lower"; }
   #home .title-small,
   #home .title-large,
   #home .title-handle {
