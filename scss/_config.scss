@@ -15,7 +15,7 @@ $secondary-color: #a00000;
 
 @mixin background {
   &.bg-image {
-    background: url("../img/home_background.jpg") no-repeat center bottom;
+    background: url("../img/background.JPG") no-repeat center bottom;
     background-size: cover;
 
     &:after {
