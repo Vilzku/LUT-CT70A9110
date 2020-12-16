@@ -1,0 +1,93 @@
+// Widescreens > 1250px
+@include mediaXl {
+}
+
+// Small screens <= 1250px
+@include mediaLg {
+  #home {
+    .grid-container {
+      zoom: 0.7;
+    }
+  }
+}
+
+// Tablets <= 850px
+@include mediaMd {
+  #home {
+    .grid-container {
+      zoom: 0.5;
+    }
+  }
+}
+
+// Smartphones <= 600px
+@include mediaSm {
+  #home {
+    .grid-container {
+      zoom: normal;
+      margin: 0;
+      width: auto;
+      display: grid;
+      grid-template-rows: 3.2rem 3rem 300px 0 3rem;
+      grid-template-areas:
+        "title-small"
+        "title-large"
+        "portrait"
+        "line"
+        "title-lower";
+    }
+
+    .title-small,
+    .title-large,
+    .title-handle,
+    .line,
+    .title-lower {
+      align-self: start;
+      justify-self: center;
+    }
+
+    .portrait {
+      grid-area: portrait;
+      margin: auto auto 0 auto;
+      width: 250px;
+    }
+
+    .title-small {
+      grid-area: title-small;
+      font-size: 3rem;
+      padding: 0;
+    }
+
+    .title-large {
+      grid-area: title-large;
+      font-size: 5rem;
+      color: $secondary-color;
+      font-weight: 600;
+      line-height: 1.1;
+      filter: drop-shadow(-6px 5px 5px #000);
+    }
+
+    .line {
+      margin: 0;
+      grid-area: line;
+      width: 380px;
+      border-top: #fff 5px solid;
+    }
+
+    .title-lower {
+      grid-area: title-lower;
+      margin: auto;
+      padding-top: 16px;
+      width: 380px;
+      height: 3.5rem;
+      overflow: hidden;
+      white-space: normal;
+      text-align: center;
+      letter-spacing: 0.1em;
+      font-family: monospace;
+      font-size: 1.5rem;
+      border-right: none; //4px solid set-text-color($primary-color);
+      animation: none; //typing 4s steps(45, end), blink 1s step-end infinite;
+    }
+  }
+}
