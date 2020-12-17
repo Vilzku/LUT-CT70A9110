@@ -41,10 +41,10 @@
 }
 
 .menu {
+  position: fixed;
   height: 100vh;
   width: 100vw;
   visibility: hidden;
-  position: fixed;
   z-index: 998;
 
   &.show {

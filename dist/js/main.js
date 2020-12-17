@@ -3,7 +3,6 @@ const menu = document.querySelector('.menu');
 const menuLeft = document.querySelector('.menu-left');
 const menuRight = document.querySelector('.menu-right');
 const menuContact = document.querySelector('.menu-contact');
-//const navItems = document.querySelectorAll('.nav-item');
 
 let showMenu = false;
 
