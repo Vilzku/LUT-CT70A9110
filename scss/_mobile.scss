@@ -22,6 +22,10 @@
 
 // Smartphones <= 600px
 @include mediaSm {
+  .menu {
+    flex-direction: column;
+  }
+
   #home {
     .grid-container {
       zoom: normal;

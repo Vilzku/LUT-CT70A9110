@@ -14,14 +14,12 @@ function toggleMenu() {
         menu.classList.add('show');
         menuLeft.classList.add('show');
         menuRight.classList.add('show');
-        //navItems.forEach(item => item.classList.add('show'));
         showMenu = true;
     } else {
         menuBtn.classList.remove('close');
         menu.classList.remove('show');
         menuLeft.classList.remove('show');
         menuRight.classList.remove('show');
-        //navItems.forEach(item => item.classList.remove('show'));
         showMenu = false;
     }
 }
