@@ -12,7 +12,7 @@
     border-color: #fff; } }
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 0px;
   padding: 35px;
@@ -25,7 +25,7 @@
     margin: 0 0 5px 0;
     background: #fff; }
   .menu-btn:hover .btn-line {
-    background: #a00000;
+    background: #aa0000;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -37,10 +37,10 @@
       transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu {
+  position: fixed;
   height: 100vh;
   width: 100vw;
   visibility: hidden;
-  position: fixed;
   z-index: 998;
   display: grid;
   grid-template-columns: 50vw auto;
@@ -56,7 +56,7 @@
     opacity: 0;
     transform: translate3d(0, 20%, 0);
     transition: all 0.5s ease-out; }
-    .menu-left h1, .menu-right h1 {
+    .menu-left .nav-item, .menu-right .nav-item {
       letter-spacing: 0.8rem; }
     .menu-left.show, .menu-right.show {
       visibility: visible;
@@ -92,25 +92,26 @@
     color: #fff;
     transition: all 0.5s ease-out; }
     .menu a:hover {
-      color: #a00000; }
-      .menu a:hover h1 {
+      color: #aa0000; }
+      .menu a:hover .nav-item {
         font-size: 2.2rem;
         transition: all 0.5s ease-out; }
 
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%; }
-
+/* --- PAGE AND TEXT ---- */
 body {
   background-color: #202020;
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   font-family: "Oxygen", sans-serif;
   letter-spacing: 0.04em;
   line-height: 1.5;
   color: #fff; }
+  body.overflow {
+    overflow-y: auto; }
   body.bg-image {
     background: url("../img/background_bw.jpg") no-repeat center center, #202020;
     background-size: cover; }
@@ -121,12 +122,36 @@ body {
       height: 100%;
       background: rgba(32, 32, 32, 0.5);
       z-index: -1; }
+  body h1 {
+    font-size: 6rem; }
+  body h2 {
+    font-size: 4rem; }
+  body h3 {
+    font-size: 2rem; }
+  body .text-secondary {
+    color: #aa0000; }
 
-/* --- TEXT ---- */
-h1 {
-  font-size: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+/* --- FOOTER ---- */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  margin-top: auto;
+  display: flex;
+  justify-content: center; }
+  footer .icon-list {
+    position: absolute;
+    align-self: flex-end;
+    list-style: none;
+    padding-inline-start: 0; }
+    footer .icon-list .icon {
+      display: inline-block;
+      margin: 8px; }
+      footer .icon-list .icon .fab {
+        color: #fff; }
+        footer .icon-list .icon .fab:hover {
+          color: #aa0000;
+          transition: all 0.5s ease-out; }
 
 /* --- HOME ---- */
 #home {
@@ -161,7 +186,7 @@ h1 {
     grid-area: title-large;
     font-size: 160px;
     align-self: end;
-    color: #a00000;
+    color: #aa0000;
     font-weight: 600;
     line-height: 1;
     filter: drop-shadow(-8px 6px 6px #000); }
@@ -182,19 +207,26 @@ h1 {
     font-size: 24px;
     border-right: 4px solid #fff;
     animation: typing 4s steps(45, end), blink 1s step-end infinite; }
-  #home .icon-list {
-    position: absolute;
+
+/* --- ABOUT ---- */
+#about {
+  display: grid;
+  grid-template-columns: "side-a content side-b";
+  grid-template-columns: 300px auto 300px; }
+  #about .sideimg {
+    width: 300px;
     align-self: flex-end;
-    list-style: none;
-    padding-inline-start: 0; }
-    #home .icon-list .icon {
-      display: inline-block;
-      margin: 8px; }
-      #home .icon-list .icon .fab {
-        color: #fff; }
-        #home .icon-list .icon .fab:hover {
-          color: #a00000;
-          transition: all 0.5s ease-out; }
+    justify-self: end;
+    z-index: 4;
+    filter: drop-shadow(-8px 6px 6px #000); }
+  #about .content {
+    background: #131313;
+    margin: 48px 0 83px 0;
+    padding: 32px;
+    filter: drop-shadow(-8px 6px 6px #000); }
+    #about .content .title {
+      margin-top: 0;
+      line-height: 1; }
 
 @media screen and (min-width: 851px) and (max-width: 1250px) {
   #home .grid-container {
@@ -217,7 +249,12 @@ h1 {
     from {
       width: 0; }
     to {
-      width: 57.6vw; } } }
+      width: 57.6vw; } }
+  #about {
+    grid-template-columns: "side-a content content";
+    grid-template-columns: 300px auto; }
+    #about .content {
+      margin: 48px 48px 83px 0; } }
 
 @media screen and (max-width: 850px) {
   #home .grid-container {
@@ -273,7 +310,7 @@ h1 {
   #home .title-large {
     grid-area: title-large;
     font-size: 5rem;
-    color: #a00000;
+    color: #aa0000;
     font-weight: 600;
     line-height: 1.1;
     filter: drop-shadow(-6px 5px 5px #000); }
