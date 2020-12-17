@@ -245,7 +245,9 @@ h1 {
 
 @media screen and (max-width: 600px) {
   .menu {
-    flex-direction: column; }
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto 100px;
+    grid-template-areas: "left" "right" "bottom"; }
   #home .grid-container {
     zoom: normal;
     margin: 0;
