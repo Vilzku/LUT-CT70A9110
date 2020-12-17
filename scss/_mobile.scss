@@ -6,7 +6,29 @@
 @include mediaLg {
   #home {
     .grid-container {
-      zoom: 0.7;
+      width: 92vw;
+      padding-bottom: 14.4vw;
+      grid-template-rows: 22.4vw 9.44vw 5px 3.84vw;
+    }
+
+    .portrait {
+      width: 32vw;
+    }
+
+    .title-small {
+      font-size: 5.12vw;
+      padding-left: 0.64vw;
+    }
+
+    .title-large {
+      font-size: 12.8vw;
+    }
+
+    .title-lower {
+      margin-top: 0.48vw;
+      padding-bottom: 0.32vw;
+      height: 2.56vw;
+      font-size: 1.92vw;
     }
   }
 }
@@ -15,7 +37,30 @@
 @include mediaMd {
   #home {
     .grid-container {
-      zoom: 0.5;
+      width: 92vw;
+      padding-bottom: 14.4vw;
+      grid-template-rows: 22.4vw 9.44vw 5px 3.84vw;
+    }
+
+    .portrait {
+      width: 32vw;
+    }
+
+    .title-small {
+      font-size: 5.12vw;
+      padding-left: 0.64vw;
+    }
+
+    .title-large {
+      font-size: 12.8vw;
+    }
+
+    .title-lower {
+      margin-top: 4px;
+      padding-bottom: 3px;
+      height: 22px;
+      font-size: 16px;
+      border-right: 2px solid set-text-color($primary-color);
     }
   }
 }

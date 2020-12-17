@@ -106,17 +106,17 @@ h1 {
 /* --- HOME ---- */
 #home {
   top: 0;
-  width: 100%;
-  height: 95vh; }
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   #home .grid-container {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     display: grid;
     width: 1150px;
-    grid-template-rows: 270px 128px 0 0;
+    padding-bottom: 180px;
+    grid-template-rows: 280px 118px 5px 48px;
     grid-template-areas: "portrait title-small" "portrait title-large" "line line" "title-lower title-lower"; }
   #home .title-small,
   #home .title-large,
@@ -126,23 +126,19 @@ h1 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
   #home .portrait {
     grid-area: portrait;
-    width: 400px;
-    align-self: end;
-    justify-self: end; }
+    width: 400px; }
   #home .title-small {
     grid-area: title-small;
     font-size: 64px;
     padding-left: 8px;
-    align-self: end;
-    justify-self: start; }
+    align-self: end; }
   #home .title-large {
     grid-area: title-large;
     font-size: 160px;
     align-self: end;
-    justify-self: start;
     color: #a00000;
     font-weight: 600;
-    line-height: 1.1;
+    line-height: 1;
     filter: drop-shadow(-8px 6px 6px #000); }
   #home .line {
     margin: 0;
@@ -150,7 +146,8 @@ h1 {
     border-top: #fff 5px solid; }
   #home .title-lower {
     grid-area: title-lower;
-    padding-top: 8px;
+    margin-top: 6px;
+    padding-bottom: 4px;
     height: 32px;
     justify-self: center;
     overflow: hidden;
@@ -160,14 +157,56 @@ h1 {
     font-size: 24px;
     border-right: 4px solid #fff;
     animation: typing 4s steps(45, end), blink 1s step-end infinite; }
+  #home .icon-list {
+    position: absolute;
+    align-self: flex-end;
+    list-style: none;
+    padding-inline-start: 0; }
+    #home .icon-list .icon {
+      display: inline-block;
+      margin: 8px; }
+      #home .icon-list .icon .fab {
+        color: #fff; }
+        #home .icon-list .icon .fab:hover {
+          color: #a00000;
+          transition: all 0.5s ease-out; }
 
 @media screen and (min-width: 851px) and (max-width: 1250px) {
   #home .grid-container {
-    zoom: 0.7; } }
+    width: 92vw;
+    padding-bottom: 14.4vw;
+    grid-template-rows: 22.4vw 9.44vw 5px 3.84vw; }
+  #home .portrait {
+    width: 32vw; }
+  #home .title-small {
+    font-size: 5.12vw;
+    padding-left: 0.64vw; }
+  #home .title-large {
+    font-size: 12.8vw; }
+  #home .title-lower {
+    margin-top: 0.48vw;
+    padding-bottom: 0.32vw;
+    height: 2.56vw;
+    font-size: 1.92vw; } }
 
 @media screen and (max-width: 850px) {
   #home .grid-container {
-    zoom: 0.5; } }
+    width: 92vw;
+    padding-bottom: 14.4vw;
+    grid-template-rows: 22.4vw 9.44vw 5px 3.84vw; }
+  #home .portrait {
+    width: 32vw; }
+  #home .title-small {
+    font-size: 5.12vw;
+    padding-left: 0.64vw; }
+  #home .title-large {
+    font-size: 12.8vw; }
+  #home .title-lower {
+    margin-top: 4px;
+    padding-bottom: 3px;
+    height: 22px;
+    font-size: 16px;
+    border-right: 2px solid #fff; } }
 
 @media screen and (max-width: 600px) {
   .menu {
