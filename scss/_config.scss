@@ -1,5 +1,5 @@
 $primary-color: #202020;
-$secondary-color: #a00000;
+$secondary-color: #aa0000;
 
 @function set-text-color($color) {
   @if (lightness($color) > 40) {

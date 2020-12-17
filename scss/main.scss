@@ -1,33 +1,73 @@
 @import "config";
 @import "menu";
 
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-}
-
+/* --- PAGE AND TEXT ---- */
 body {
   background-color: $primary-color;
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  &.overflow {
+    overflow-y: auto;
+  }
   @include background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   font-family: "Oxygen", sans-serif;
   letter-spacing: 0.04em;
   line-height: 1.5;
   color: set-text-color($primary-color);
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+  }
+
+  .text-secondary {
+    color: $secondary-color;
+  }
 }
 
-/* --- TEXT ---- */
-h1 {
-  font-size: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
+/* --- FOOTER ---- */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
 
-p {
+  .icon-list {
+    position: absolute;
+    align-self: flex-end;
+    list-style: none;
+    padding-inline-start: 0;
+
+    .icon {
+      display: inline-block;
+      margin: 8px;
+      .fab {
+        color: #fff;
+
+        &:hover {
+          color: $secondary-color;
+          @include easeOut;
+        }
+      }
+    }
+  }
 }
 
 /* --- HOME ---- */
@@ -102,24 +142,31 @@ p {
     border-right: 4px solid set-text-color($primary-color);
     animation: typing 4s steps(45, end), blink 1s step-end infinite;
   }
+}
 
-  .icon-list {
-    position: absolute;
+/* --- ABOUT ---- */
+#about {
+  display: grid;
+  grid-template-columns: "side-a content side-b";
+  grid-template-columns: 300px auto 300px;
+
+  .sideimg {
+    width: 300px;
     align-self: flex-end;
-    list-style: none;
-    padding-inline-start: 0;
+    justify-self: end;
+    z-index: 4;
+    filter: drop-shadow(-8px 6px 6px #000);
+  }
 
-    .icon {
-      display: inline-block;
-      margin: 8px;
-      .fab {
-        color: #fff;
+  .content {
+    background: darken($primary-color, 5);
+    margin: 48px 0 83px 0;
+    padding: 32px;
+    filter: drop-shadow(-8px 6px 6px #000);
 
-        &:hover {
-          color: $secondary-color;
-          @include easeOut;
-        }
-      }
+    .title {
+      margin-top: 0;
+      line-height: 1;
     }
   }
 }
