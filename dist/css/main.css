@@ -2,7 +2,7 @@
   from {
     width: 0; }
   to {
-    width: 730px; } }
+    width: 720px; } }
 
 @keyframes blink {
   from,
@@ -152,7 +152,7 @@ h1 {
     justify-self: center;
     overflow: hidden;
     white-space: nowrap;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     font-family: monospace, "Courier New", Courier;
     font-size: 24px;
     border-right: 4px solid #fff;
@@ -187,7 +187,12 @@ h1 {
     margin-top: 0.48vw;
     padding-bottom: 0.32vw;
     height: 2.56vw;
-    font-size: 1.92vw; } }
+    font-size: 1.92vw; }
+  @keyframes typing {
+    from {
+      width: 0; }
+    to {
+      width: 57.6vw; } } }
 
 @media screen and (max-width: 850px) {
   #home .grid-container {
@@ -206,7 +211,12 @@ h1 {
     padding-bottom: 3px;
     height: 22px;
     font-size: 16px;
-    border-right: 2px solid #fff; } }
+    border-right: 2px solid #fff; }
+  @keyframes typing {
+    from {
+      width: 0; }
+    to {
+      width: 490px; } } }
 
 @media screen and (max-width: 600px) {
   .menu {
