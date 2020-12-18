@@ -32,7 +32,7 @@
     }
   }
 
-  // Appearing text
+  // Appearing text in home
   @keyframes typing {
     from {
       width: 0;
@@ -83,7 +83,7 @@
     }
   }
 
-  // Appearing text
+  // Appearing text in home
   @keyframes typing {
     from {
       width: 0;
@@ -96,6 +96,9 @@
 
 // Smartphones <= 600px
 @include mediaSm {
+  .menu-btn {
+    padding: 16px;
+  }
   .menu {
     grid-template-columns: 100vw;
     grid-template-rows: auto auto 100px;
@@ -171,6 +174,17 @@
       font-size: 1.5rem;
       border-right: none; //4px solid set-text-color($primary-color);
       animation: none; //typing 4s steps(45, end), blink 1s step-end infinite;
+    }
+  }
+
+  #work {
+    text-align: center;
+    h1,
+    .text-secondary {
+      font-size: 5rem;
+    }
+    h3 {
+      font-size: 1rem;
     }
   }
 }

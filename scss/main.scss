@@ -1,6 +1,19 @@
 @import "config";
 @import "menu";
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(100, 100, 100);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(58, 58, 58);
+}
+
 /* --- PAGE AND TEXT ---- */
 body {
   background-color: $primary-color;
@@ -180,33 +193,43 @@ footer {
 
 /* --- WORK ---- */
 #work {
-  padding: 48px;
+  padding: 0 48px;
+  line-height: 1.45;
 
   .flex-container {
-    margin-top: 1rem;
+    margin: 0.5rem auto 81px auto;
+    width: 98%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: flex-start;
     align-content: start;
 
     .item {
       margin: 8px;
-      flex: 1 0 400px;
+      flex: 1 0 380px;
+      max-width: 480px;
       a {
         text-decoration: none;
         display: block;
       }
 
       .project-img {
-        text-align: center;
+        padding-top: 66.66667%;
+        position: relative;
         img {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          object-fit: cover;
           margin: 0;
           border: solid 2px #fff;
+          filter: grayscale(100%);
           @include easeOut;
           &:hover {
-            opacity: 0.8;
+            filter: none;
             border: solid 2px $secondary-color;
           }
         }
@@ -214,14 +237,19 @@ footer {
 
       .project-link {
         padding: 8px 1rem;
+        margin-top: 8px;
         background: $secondary-color;
         color: set-text-color($secondary-color);
         @include easeOut;
 
         &:hover {
-          background: #fff;
-          color: set-text-color(#fff);
+          background: rgb(100, 0, 0);
+          color: set-text-color(rgb(100, 0, 0));
         }
+      }
+
+      &.item-empty {
+        margin: 0 8px;
       }
     }
   }

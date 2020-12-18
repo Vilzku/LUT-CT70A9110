@@ -17,7 +17,8 @@
   top: 0px;
   padding: 35px;
   z-index: 999;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
@@ -27,7 +28,7 @@
   .menu-btn:hover .btn-line {
     background: #aa0000; }
   .menu-btn.close {
-    transform: rotate(180deg); }
+    transform: rotate(180deg) translate(0, 6px); }
     .menu-btn.close .btn-line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px); }
     .menu-btn.close .btn-line:nth-child(2) {
@@ -98,6 +99,18 @@
       .menu a:hover .nav-item {
         font-size: 2.2rem;
         transition: all 0.25s ease-out; }
+
+::-webkit-scrollbar {
+  width: 6px; }
+
+::-webkit-scrollbar-track {
+  background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background: #646464; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a; }
 
 /* --- PAGE AND TEXT ---- */
 body {
@@ -239,38 +252,51 @@ footer {
 
 /* --- WORK ---- */
 #work {
-  padding: 48px; }
+  padding: 0 48px;
+  line-height: 1.45; }
   #work .flex-container {
-    margin-top: 1rem;
+    margin: 0.5rem auto 81px auto;
+    width: 98%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: flex-start;
     align-content: start; }
     #work .flex-container .item {
       margin: 8px;
-      flex: 1 0 400px; }
+      flex: 1 0 380px;
+      max-width: 480px; }
       #work .flex-container .item a {
         text-decoration: none;
         display: block; }
       #work .flex-container .item .project-img {
-        text-align: center; }
+        padding-top: 66.66667%;
+        position: relative; }
         #work .flex-container .item .project-img img {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          object-fit: cover;
           margin: 0;
           border: solid 2px #fff;
+          filter: grayscale(100%);
           transition: all 0.5s ease-out; }
           #work .flex-container .item .project-img img:hover {
-            opacity: 0.8;
+            filter: none;
             border: solid 2px #aa0000; }
       #work .flex-container .item .project-link {
         padding: 8px 1rem;
+        margin-top: 8px;
         background: #aa0000;
         color: #fff;
         transition: all 0.5s ease-out; }
         #work .flex-container .item .project-link:hover {
-          background: #fff;
-          color: #000; }
+          background: #640000;
+          color: #fff; }
+      #work .flex-container .item.item-empty {
+        margin: 0 8px; }
 
 @media screen and (min-width: 851px) and (max-width: 1250px) {
   #home .grid-container {
@@ -325,6 +351,8 @@ footer {
       width: 490px; } } }
 
 @media screen and (max-width: 600px) {
+  .menu-btn {
+    padding: 16px; }
   .menu {
     grid-template-columns: 100vw;
     grid-template-rows: auto auto 100px;
@@ -376,4 +404,11 @@ footer {
     font-family: monospace;
     font-size: 1.5rem;
     border-right: none;
-    animation: none; } }
+    animation: none; }
+  #work {
+    text-align: center; }
+    #work h1,
+    #work .text-secondary {
+      font-size: 5rem; }
+    #work h3 {
+      font-size: 1rem; } }
