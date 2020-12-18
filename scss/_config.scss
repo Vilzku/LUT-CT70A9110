@@ -77,3 +77,21 @@ $secondary-color: #aa0000;
     @content;
   }
 }
+
+// Custom scrollbar
+@mixin scrollbar {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 16px 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(75, 75, 75);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(58, 58, 58);
+  }
+}

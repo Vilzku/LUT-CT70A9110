@@ -1,18 +1,6 @@
 @import "config";
 @import "menu";
-
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: rgb(100, 100, 100);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(58, 58, 58);
-}
+@include scrollbar;
 
 /* --- PAGE AND TEXT ---- */
 body {
@@ -159,6 +147,7 @@ footer {
     letter-spacing: 0.12em;
     font-family: monospace, "Courier New", Courier;
     font-size: 24px;
+    filter: drop-shadow(-4px 3px 3px #000);
     border-right: 4px solid set-text-color($primary-color);
     animation: typing 4s steps(45, end), blink 1s step-end infinite;
   }

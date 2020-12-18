@@ -186,5 +186,9 @@
     h3 {
       font-size: 1rem;
     }
+
+    .flex-container .item {
+      flex: 1 0 300px;
+    }
   }
 }

@@ -104,10 +104,12 @@
   width: 6px; }
 
 ::-webkit-scrollbar-track {
-  background: transparent; }
+  background: transparent;
+  margin: 16px 8px; }
 
 ::-webkit-scrollbar-thumb {
-  background: #646464; }
+  background: #4b4b4b;
+  border-radius: 10px; }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #3a3a3a; }
@@ -227,6 +229,7 @@ footer {
     letter-spacing: 0.12em;
     font-family: monospace, "Courier New", Courier;
     font-size: 24px;
+    filter: drop-shadow(-4px 3px 3px #000);
     border-right: 4px solid #fff;
     animation: typing 4s steps(45, end), blink 1s step-end infinite; }
 
@@ -411,4 +414,6 @@ footer {
     #work .text-secondary {
       font-size: 5rem; }
     #work h3 {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+    #work .flex-container .item {
+      flex: 1 0 300px; } }
