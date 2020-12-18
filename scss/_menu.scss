@@ -5,19 +5,18 @@
   padding: 35px;
   z-index: 999;
   cursor: pointer;
-  @include easeOut;
 
   .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: set-text-color($primary-color);
+    @include easeOut;
   }
 
   &:hover {
     .btn-line {
       background: $secondary-color;
-      @include easeOut;
     }
   }
 
@@ -65,6 +64,7 @@
     align-items: center;
 
     .nav-item {
+      font-size: 2rem;
       letter-spacing: 0.8rem;
     }
 
@@ -114,6 +114,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .contact {
+      font-size: 2rem;
+    }
     p {
       margin-left: 32px;
     }
@@ -122,13 +125,14 @@
   a {
     text-decoration: none;
     color: set-text-color($primary-color);
-    @include easeOut;
+    transition: all 0.25s ease;
 
     &:hover {
       color: $secondary-color;
+
       .nav-item {
         font-size: 2.2rem;
-        @include easeOut;
+        transition: all 0.25s ease-out;
       }
     }
   }
