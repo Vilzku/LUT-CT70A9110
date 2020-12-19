@@ -48,6 +48,14 @@ body {
   .text-secondary {
     color: $secondary-color;
   }
+
+  hr {
+    width: 60px;
+    height: 4px;
+    background: $secondary-color;
+    border: none;
+    margin: 25px auto;
+  }
 }
 
 /* --- FOOTER ---- */
@@ -58,6 +66,7 @@ footer {
   margin-top: auto;
   display: flex;
   justify-content: center;
+  z-index: 800;
 
   .icon-list {
     position: absolute;
@@ -159,30 +168,31 @@ footer {
 
 /* --- ABOUT ---- */
 #about {
+  width: 1250px;
+  align-self: center;
+  padding: 30px 48px 0 48px;
+
   display: flex;
   justify-content: center;
-  padding-top: 30px;
 
   .sideimg {
-    width: 20vw;
-    min-width: 400px;
+    width: 400px;
+    margin-top: 128px;
     z-index: 4;
     filter: drop-shadow(-8px 6px 6px #000);
     object-fit: contain;
   }
 
   .content {
-    width: 50vw;
     margin-bottom: 81px;
 
     .text-area {
-      padding: 20vh 48px 20vh 48px;
+      padding: 6rem 48px 6rem 48px;
       background: darken($primary-color, 5);
       filter: drop-shadow(-8px 6px 6px #000);
 
       p {
-        width: 80%;
-        margin: 20vh 0;
+        margin: 6rem 0;
         word-wrap: normal;
       }
 
@@ -203,6 +213,7 @@ footer {
         h3 {
           font-size: 3rem;
           margin: 0;
+          line-height: 1.1;
         }
 
         a {
@@ -217,7 +228,7 @@ footer {
       }
 
       #education {
-        margin-top: 20vh;
+        margin-top: 6rem;
         display: grid;
         grid-template-areas:
           "title content1"

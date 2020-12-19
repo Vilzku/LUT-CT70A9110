@@ -42,6 +42,13 @@
     }
   }
 
+  #about {
+    align-self: flex-end;
+    padding: 30px 16px 0 16px;
+    width: 110vw;
+    max-width: 1250px;
+  }
+
   #work {
     width: 96vw;
   }
@@ -85,6 +92,47 @@
     }
     to {
       width: 490px;
+    }
+  }
+
+  #about {
+    align-self: center;
+    padding: 30px 0 0 0;
+    width: 96vw;
+
+    .sideimg {
+      position: absolute;
+      align-self: flex-end;
+      right: 0;
+      width: 250px;
+      margin: 0;
+    }
+
+    .content {
+      .text-area {
+        #education {
+          grid-template-areas:
+            "title"
+            "content1"
+            "content2";
+          grid-template-columns: 100%;
+          grid-template-rows: auto auto auto;
+        }
+
+        .call-to-action,
+        #education {
+          justify-self: none;
+          margin-right: auto;
+          width: 70%;
+        }
+
+        #education {
+          width: 60%;
+          h3 {
+            justify-self: start;
+          }
+        }
+      }
     }
   }
 
@@ -173,6 +221,30 @@
       font-size: 1.5rem;
       border-right: none; //4px solid set-text-color($primary-color);
       animation: none; //typing 4s steps(45, end), blink 1s step-end infinite;
+    }
+  }
+
+  #about {
+    .sideimg {
+      width: 200px;
+    }
+
+    .content {
+      .title {
+        font-size: 16vw;
+        text-align: center;
+      }
+
+      .call-to-action {
+        justify-self: center;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+      }
+
+      #education {
+        width: 50%;
+      }
     }
   }
 
