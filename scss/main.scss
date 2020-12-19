@@ -24,6 +24,7 @@ body {
   h1 {
     font-size: 6rem;
     margin: 0;
+    padding: 0.6rem 1.5rem;
   }
 
   h2 {
@@ -150,6 +151,8 @@ footer {
     font-size: 24px;
     filter: drop-shadow(-4px 3px 3px #000);
     border-right: 4px solid set-text-color($primary-color);
+
+    // Typewriter effect copied from https://css-tricks.com/snippets/css/typewriter-effect/ and modified to fit the page
     animation: typing 4s steps(45, end), blink 1s step-end infinite;
   }
 }
@@ -171,10 +174,6 @@ footer {
   .content {
     width: 50vw;
     margin-bottom: 81px;
-
-    .title {
-      padding-left: 24px;
-    }
 
     .text-area {
       padding: 20vh 48px 20vh 48px;
@@ -246,61 +245,95 @@ footer {
 #work {
   padding: 0 48px;
   line-height: 1.45;
+  width: 1250px;
+  align-self: center;
 
   .flex-container {
     margin: 0.5rem auto 81px auto;
-    width: 98%;
+
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: flex-start;
     align-content: start;
 
+    a {
+      text-decoration: none;
+      color: set-text-color(darken($primary-color, 5));
+    }
+
     .item {
       margin: 8px;
       flex: 1 0 380px;
-      max-width: 480px;
-      a {
-        text-decoration: none;
-        display: block;
-      }
+      max-width: 400px;
+      height: 480px;
+      background: darken($primary-color, 5);
+      border-radius: 20px;
+      filter: grayscale(100%);
+      transition: all 0.25 ease-out;
 
       .project-img {
-        padding-top: 66.66667%;
+        display: block;
+        padding-top: 50%;
         position: relative;
+        margin-bottom: 16px;
         img {
           position: absolute;
           top: 0;
           left: 0;
-          width: calc(100% - 4px);
-          height: calc(100% - 4px);
+          width: 100%;
+          height: 100%;
           object-fit: cover;
           margin: 0;
-          border: solid 2px #fff;
-          filter: grayscale(100%);
-          @include easeOut;
-          &:hover {
-            filter: none;
-            border: solid 2px $secondary-color;
-          }
+          border-radius: 20px 20px 0 0;
         }
       }
 
+      p {
+        padding: 16px 32px;
+        margin: 0;
+      }
+
+      h3 {
+        padding: 0 32px;
+        margin: 0;
+        //line-height: 1;
+      }
+
+      .project-class {
+        font-size: 0.8rem;
+      }
+
       .project-link {
-        padding: 8px 1rem;
-        margin-top: 8px;
+        margin: 0 auto 0 32px;
+        display: inline-flex;
+        padding: 12px 1.5rem 12px 1.4rem;
         background: $secondary-color;
         color: set-text-color($secondary-color);
-        @include easeOut;
+        border-radius: 50px;
+        opacity: 0;
+        transform: translate3d(0, 20%, 0);
+        transition: all 0.25s ease-out;
 
-        &:hover {
-          background: rgb(100, 0, 0);
-          color: set-text-color(rgb(100, 0, 0));
+        i {
+          margin-top: 3px;
+          margin-right: 8px;
+        }
+      }
+
+      &:hover {
+        background: darken($primary-color, 3);
+        filter: none;
+
+        .project-link {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
         }
       }
 
       &.item-empty {
         margin: 0 8px;
+        height: 0;
       }
     }
   }
