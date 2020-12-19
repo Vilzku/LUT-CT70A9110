@@ -430,6 +430,9 @@ footer {
       grid-template-areas: "title" "content1" "content2";
       grid-template-columns: 100%;
       grid-template-rows: auto auto auto; }
+    #about .content .text-area #p3 {
+      margin-right: auto;
+      width: 90%; }
     #about .content .text-area .call-to-action,
     #about .content .text-area #education {
       justify-self: none;
@@ -502,6 +505,9 @@ footer {
   #about .content .title {
     font-size: 16vw;
     text-align: center; }
+  #about .content #p3 {
+    margin-right: auto;
+    width: 100%; }
   #about .content .call-to-action {
     justify-self: center;
     margin-right: auto;

@@ -119,6 +119,11 @@
           grid-template-rows: auto auto auto;
         }
 
+        #p3 {
+          margin-right: auto;
+          width: 90%;
+        }
+
         .call-to-action,
         #education {
           justify-self: none;
@@ -233,6 +238,11 @@
       .title {
         font-size: 16vw;
         text-align: center;
+      }
+
+      #p3 {
+        margin-right: auto;
+        width: 100%;
       }
 
       .call-to-action {
