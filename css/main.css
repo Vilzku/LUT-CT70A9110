@@ -153,6 +153,12 @@ body {
     color: #aa0000; }
   body .text-secondary {
     color: #aa0000; }
+  body hr {
+    width: 60px;
+    height: 4px;
+    background: #aa0000;
+    border: none;
+    margin: 25px auto; }
 
 /* --- FOOTER ---- */
 footer {
@@ -161,7 +167,8 @@ footer {
   width: 100vw;
   margin-top: auto;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 800; }
   footer .icon-list {
     position: absolute;
     align-self: flex-end;
@@ -234,25 +241,25 @@ footer {
 
 /* --- ABOUT ---- */
 #about {
+  width: 1250px;
+  align-self: center;
+  padding: 30px 48px 0 48px;
   display: flex;
-  justify-content: center;
-  padding-top: 30px; }
+  justify-content: center; }
   #about .sideimg {
-    width: 20vw;
-    min-width: 400px;
+    width: 400px;
+    margin-top: 128px;
     z-index: 4;
     filter: drop-shadow(-8px 6px 6px #000);
     object-fit: contain; }
   #about .content {
-    width: 50vw;
     margin-bottom: 81px; }
     #about .content .text-area {
-      padding: 20vh 48px 20vh 48px;
+      padding: 6rem 48px 6rem 48px;
       background: #131313;
       filter: drop-shadow(-8px 6px 6px #000); }
       #about .content .text-area p {
-        width: 80%;
-        margin: 20vh 0;
+        margin: 6rem 0;
         word-wrap: normal; }
       #about .content .text-area #p1 {
         margin-top: 0; }
@@ -263,7 +270,8 @@ footer {
         text-align: center; }
         #about .content .text-area .call-to-action h3 {
           font-size: 3rem;
-          margin: 0; }
+          margin: 0;
+          line-height: 1.1; }
         #about .content .text-area .call-to-action a {
           text-decoration: none;
           color: #fff;
@@ -271,7 +279,7 @@ footer {
           #about .content .text-area .call-to-action a:hover {
             color: #aa0000; }
       #about .content .text-area #education {
-        margin-top: 20vh;
+        margin-top: 6rem;
         display: grid;
         grid-template-areas: "title content1" "title content2";
         grid-template-columns: 30% 70%;
@@ -377,6 +385,11 @@ footer {
       width: 0; }
     to {
       width: 57.6vw; } }
+  #about {
+    align-self: flex-end;
+    padding: 30px 16px 0 16px;
+    width: 110vw;
+    max-width: 1250px; }
   #work {
     width: 96vw; } }
 
@@ -403,6 +416,29 @@ footer {
       width: 0; }
     to {
       width: 490px; } }
+  #about {
+    align-self: center;
+    padding: 30px 0 0 0;
+    width: 96vw; }
+    #about .sideimg {
+      position: absolute;
+      align-self: flex-end;
+      right: 0;
+      width: 250px;
+      margin: 0; }
+    #about .content .text-area #education {
+      grid-template-areas: "title" "content1" "content2";
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto; }
+    #about .content .text-area .call-to-action,
+    #about .content .text-area #education {
+      justify-self: none;
+      margin-right: auto;
+      width: 70%; }
+    #about .content .text-area #education {
+      width: 60%; }
+      #about .content .text-area #education h3 {
+        justify-self: start; }
   #work {
     width: 96vw; } }
 
@@ -461,6 +497,18 @@ footer {
     font-size: 1.5rem;
     border-right: none;
     animation: none; }
+  #about .sideimg {
+    width: 200px; }
+  #about .content .title {
+    font-size: 16vw;
+    text-align: center; }
+  #about .content .call-to-action {
+    justify-self: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%; }
+  #about .content #education {
+    width: 50%; }
   #work {
     width: 96vw; }
     #work h1,
