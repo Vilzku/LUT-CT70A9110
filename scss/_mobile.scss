@@ -41,15 +41,6 @@
       width: 57.6vw;
     }
   }
-
-  #about {
-    grid-template-columns: "side-a content content";
-    grid-template-columns: 300px auto;
-
-    .content {
-      margin: 48px 48px 83px 0;
-    }
-  }
 }
 
 // Tablets <= 850px
