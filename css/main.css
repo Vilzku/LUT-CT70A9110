@@ -302,13 +302,13 @@ footer {
       text-decoration: none;
       color: #fff; }
     #work .flex-container .item {
-      margin: 8px;
-      flex: 1 0 380px;
+      margin: 16px;
+      flex: 1 0 320px;
       max-width: 400px;
       background: #131313;
       border-radius: 20px;
       filter: grayscale(100%);
-      transition: all 0.25 ease-out;
+      transition: all 0.25s ease-out;
       display: inline-block; }
       #work .flex-container .item .project-img {
         display: block;
@@ -352,7 +352,7 @@ footer {
           opacity: 1;
           transform: translate3d(0, 0, 0); }
       #work .flex-container .item.item-empty {
-        margin: 0 8px;
+        margin: 0 16px;
         height: 0; }
 
 @media screen and (min-width: 851px) and (max-width: 1264px) {
@@ -376,7 +376,9 @@ footer {
     from {
       width: 0; }
     to {
-      width: 57.6vw; } } }
+      width: 57.6vw; } }
+  #work {
+    width: 96vw; } }
 
 @media screen and (max-width: 850px) {
   #home .grid-container {
@@ -400,7 +402,9 @@ footer {
     from {
       width: 0; }
     to {
-      width: 490px; } } }
+      width: 490px; } }
+  #work {
+    width: 96vw; } }
 
 @media screen and (max-width: 600px) {
   .menu-btn {
@@ -458,11 +462,10 @@ footer {
     border-right: none;
     animation: none; }
   #work {
-    text-align: center; }
+    width: 96vw; }
     #work h1,
     #work .text-secondary {
+      text-align: center;
       font-size: 5rem; }
-    #work h3 {
-      font-size: 1rem; }
-    #work .flex-container .item {
-      flex: 1 0 300px; } }
+    #work h2 {
+      text-align: center; } }
