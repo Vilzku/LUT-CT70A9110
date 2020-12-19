@@ -505,6 +505,8 @@ footer {
   #about .content .title {
     font-size: 16vw;
     text-align: center; }
+  #about .content .text-area {
+    padding: 6rem 16px 6rem 16px; }
   #about .content #p3 {
     margin-right: auto;
     width: 100%; }
@@ -514,7 +516,7 @@ footer {
     margin-left: auto;
     width: 100%; }
   #about .content #education {
-    width: 50%; }
+    width: 45%; }
   #work {
     width: 96vw; }
     #work h1,
